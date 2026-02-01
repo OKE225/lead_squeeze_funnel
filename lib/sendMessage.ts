@@ -5,6 +5,12 @@ import nodemailer from "nodemailer";
 import { readFileSync } from "fs";
 import path from "path";
 
+interface NodemailerError extends Error {
+  code?: string;
+  response?: string;
+  responseCode?: number;
+}
+
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -19,16 +25,20 @@ const html = readFileSync(
 );
 
 export const sendMessage = async (clientEmail: string) => {
-  return transporter.sendMail(
-    {
-      from: process.env.GMAIL_USER,
-      to: clientEmail,
-      subject: "Twój ebook już jest!",
-      html,
-    },
-    (error, info) => {
-      if (error) console.error(`Error: ${error}`);
-      else console.log(`Email sent: ${info.response}`);
-    },
-  );
+  const mailOptions = {
+    from: process.env.GMAIL_USER,
+    to: clientEmail,
+    subject: "Twój ebook już jest!",
+    html,
+  };
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log("✅ Email wysłany:", info.messageId);
+    return true;
+  } catch (error) {
+    const err = error as NodemailerError;
+    console.error("❌ Błąd Nodemailer:", err.code, err.message);
+    throw error;
+  }
 };
