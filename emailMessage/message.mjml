@@ -1,0 +1,31 @@
+<mjml html lang="pl">
+  <mj-head>
+    <mj-attributes>
+      <mj-text align="center" color="#fff"></mj-text>
+    </mj-attributes>
+  </mj-head>
+  <mj-body width="600px">
+    <mj-section background-color="#09090b">
+      <mj-column>
+        <mj-text>Ebook z projektami Frontend jest już Twój</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#18181b">
+      <mj-column>
+        <mj-text font-size="32px" font-weight="900">Gotowy do pobrania</mj-text>
+        <mj-text
+          >Twój ebook z gotowymi projektami Frontend czeka. Pobierz teraz i
+          zacznij budować portfolio w 48h!</mj-text
+        >
+        <mj-button
+          href="https://www.google.com/"
+          background-color="#e11d48"
+          color="#fff"
+          font-weight="900"
+          >POBIERZ EBOOK TERAZ!</mj-button
+        >
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+<!-- npx mjml emailMessage/message.mjml -o emailMessage/message.html -->
