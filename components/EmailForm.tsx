@@ -3,6 +3,7 @@
 import { sendContactEmail } from "@/app/actions";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
+import SubmitButton from "./SubmitButton";
 
 export interface EmailFormState {
   error: string;
@@ -54,11 +55,8 @@ const EmailForm = () => {
           <p className="font-medium text-red-600 text-md">{state.error}</p>
         )}
       </section>
-      <button
-        type="submit"
-        className="w-full bg-linear-to-r from-orange-400 via-red-400 to-pink-500 text-white font-bold text-xl mt-5 py-4 tracking-wide rounded-md cursor-pointer hover:from-orange-500 hover:via-red-500 hover:to-pink-600">
-        Pobierz Ebook za Darmo Teraz!
-      </button>
+
+      <SubmitButton />
     </form>
   );
 };
