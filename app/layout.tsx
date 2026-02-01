@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import "dotenv/config";
-import dbConnect from "@/lib/dbConnect";
-
-dbConnect();
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],

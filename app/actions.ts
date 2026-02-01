@@ -3,11 +3,14 @@
 import Email from "@/models/Email";
 import { sendMessage } from "@/lib/sendMessage";
 import { EmailFormState } from "@/components/EmailForm";
+import dbConnect from "@/lib/dbConnect";
 
 export const sendContactEmail = async (
   _prevState: EmailFormState,
   formData: FormData,
 ): Promise<EmailFormState> => {
+  await dbConnect();
+
   const emailRaw = formData.get("email");
 
   if (typeof emailRaw !== "string" || !emailRaw.trim()) {
