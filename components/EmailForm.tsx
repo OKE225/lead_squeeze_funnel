@@ -29,7 +29,7 @@ const EmailForm = () => {
     setInputValue(e.target.value);
 
   return (
-    <form action={formAction} className="mt-25">
+    <form action={formAction} className="mt-25 max-lg:mt-20">
       <section className="h-25">
         <label
           htmlFor="email"

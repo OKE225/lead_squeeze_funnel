@@ -23,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="pl" className={`${poppins.variable} ${poppins.className}`}>
       <body className="h-screen flex justify-center bg-zinc-900 text-white">
-        <section className="w-[75%] max-w-350">{children}</section>
+        <section className="w-[75%] max-lg:w-[95%] max-w-350">
+          {children}
+        </section>
       </body>
     </html>
   );
