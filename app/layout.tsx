@@ -11,8 +11,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Lead Squeeze Funnel",
-  description: "Template lead squeeze funnel website",
+  title: "Zbuduj Portfolio Frontendowe",
+  description:
+    "Zbuduj Portfolio Frontendowe w 48 Godzin i Zdobądź Lepszą Pracę. Lista projektów Frontend ze wskazówkami",
 };
 
 export default function RootLayout({
