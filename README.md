@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💻 Lead Squeeze Funnel
 
-## Getting Started
+This web app is a ready-to-use template for a lead squeeze funnel, inspired by the book "Dotcom Secrets". It helps collect emails from visitors to build your marketing list quickly and effectively.
 
-First, run the development server:
+The app validates emails for correct format, handles errors gracefully, and prevents access to the /success subpage until a valid email is provided. It checks the MongoDB database (connected via Mongoose) to avoid duplicate signups. Once validated, it sends a personalized email to the user using Nodemailer, with responsive designs created via MJML. The email features a strong call-to-action (CTA) button to download the ebook right away. All registered users are securely stored in MongoDB for future campaigns.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Ideal for marketers and developers wanting a simple, high-converting lead capture page!
+
+## ⚙️ Technologies
+
+[![My Skills](https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,js,nodejs,mongodb,gmail,vercel)](https://skillicons.dev)
+
+## ⭐ Key features
+
+- Email validation
+- Error handling
+- You can't access the `/success` subpage without providing an email
+- Check if the email already exists in the database
+- Send an email to the user's provided address
+- Email message with a CTA to download the ebook
+- MongoDB database with a list of registered users
+
+## 👀 Preview
+
+![Website view](./docs/website.png)
+
+<table>
+  <tr>
+    <td><img src="./docs/thankYou.png" width="100%"></td>
+    <td><img src="./docs/email.png" width="1000px"></td>
+  </tr>
+</table>
+
+## 📄 File .env
+
+```env
+GMAIL_HOST=<host>
+GMAIL_USER=<your email>
+GMAIL_PASS=<your email password>
+MONGODB_URI=<mongodb connect url>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💼 License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The [MIT License](./LICENSE) (MIT). Please see License File for more information.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔎 See Also
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[My GitHub profile](https://github.com/OKE225)
